@@ -10,8 +10,8 @@ model = whisper.load_model("base")
 
 
 def transcribe_audio_to_text(audio_path: str) -> str:
-    if not os.path.exists("chunks_silence"):
-        os.makedirs("chunks_silence")
+    if not os.path.exists("uploads"):
+        os.makedirs("uploads")
     text = ""
     print("Transcribing audio...")
     print("this may take a while depending on the length of the audio file.")
