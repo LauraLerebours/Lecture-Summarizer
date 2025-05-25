@@ -17,8 +17,8 @@ def transcribe_audio_to_text(audio_path: str) -> str:
     print("this may take a while depending on the length of the audio file.")
     text = model.transcribe(audio_path, language="en")['text']
     print("Transcription complete.")
-    for filename in os.listdir("chunks_silence"):
-        file_path = os.path.join("chunks_silence", filename)
+    for filename in os.listdir("uploads"):
+        file_path = os.path.join("uploads", filename)
         if filename.endswith(".wav") and os.path.isfile(file_path):
             os.remove(file_path)    
     print("Cleaning up completed.")
